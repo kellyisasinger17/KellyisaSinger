@@ -1,8 +1,5 @@
-import React, { useMemo, useState } from "react";
-import { createRoot } from "react-dom/client";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap";
-import "./styles.css";
+const { useMemo, useState } = React;
+const { createRoot } = ReactDOM;
 
 const imageUrl = (fileName) => `images/${fileName}`;
 
