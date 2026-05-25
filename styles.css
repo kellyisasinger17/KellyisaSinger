@@ -16,12 +16,12 @@ body {
 }
 
 .site-nav {
-  min-height: 140px;
+  min-height: 58px;
   background: var(--nav);
 }
 
 .site-nav .container {
-  min-height: 140px;
+  min-height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,9 +39,11 @@ body {
 
 .nav-menu a {
   color: rgba(255, 255, 255, 0.88);
-  font-size: clamp(2.3rem, 3.2vw, 3rem);
+  font-size: 10px;
   font-weight: 300;
+  letter-spacing: 0.08em;
   line-height: 1;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -57,14 +59,14 @@ body {
 }
 
 .hero {
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 58px);
 }
 
 .hero-image {
   position: relative;
   overflow: hidden;
   height: clamp(560px, 68vw, 965px);
-  max-height: calc(100vh - 140px);
+  max-height: calc(100vh - 58px);
   background: #181818;
 }
 
@@ -238,12 +240,14 @@ h1 {
 }
 
 .scroll-carousel {
+  position: relative;
   display: flex;
-  height: 390px;
+  height: clamp(260px, 42vw, 520px);
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-color: rgba(255, 255, 255, 0.34) transparent;
+  background: #050505;
 }
 
 .scroll-slide {
@@ -255,8 +259,44 @@ h1 {
 .scroll-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+}
+
+.gallery-frame {
+  position: relative;
+  background: #050505;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 1.65rem;
+  line-height: 1;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.gallery-arrow:hover,
+.gallery-arrow:focus {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.gallery-arrow.prev {
+  left: 0.75rem;
+}
+
+.gallery-arrow.next {
+  right: 0.75rem;
 }
 
 .slide-dots {
@@ -324,7 +364,7 @@ h1 {
 @media (max-width: 767.98px) {
   .site-nav,
   .site-nav .container {
-    min-height: 70px;
+    min-height: 58px;
   }
 
   .site-nav .container {
@@ -355,7 +395,7 @@ h1 {
 
   .nav-menu {
     position: absolute;
-    top: 70px;
+    top: 58px;
     right: 0;
     left: 0;
     z-index: 10;
@@ -369,7 +409,7 @@ h1 {
   .nav-menu a {
     display: block;
     padding: 0.55rem 1rem;
-    font-size: 1.35rem;
+    font-size: 10px;
   }
 
   .nav-toggle:checked ~ .nav-menu {
@@ -402,6 +442,12 @@ h1 {
   }
 
   .scroll-carousel {
-    height: 310px;
+    height: clamp(240px, 76vw, 430px);
+  }
+
+  .gallery-arrow {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.35rem;
   }
 }
