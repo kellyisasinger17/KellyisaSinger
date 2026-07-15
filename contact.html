@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Kelly Singer Lançon">
+    <title>Contact | Kelly Singer Lançon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Lavishly+Yours&amp;family=Ruthie&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-nav">
+      <div class="container position-relative">
+        <a class="mobile-brand" href="index.html">Kelly Singer Lançon</a>
+        <input class="nav-toggle" type="checkbox" id="navToggle">
+        <label class="nav-toggle-label" for="navToggle" aria-label="Toggle navigation">☰</label>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resumé</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <header class="page-hero"><h1>Contact</h1></header>
+      <section class="card-content" aria-label="Contact form">
+        <div class="container">
+          <div class="contact-card">
+            <form class="contact-form" action="https://formspree.io/f/mrenepyw" method="POST">
+              <div class="contact-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="contact-field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="contact-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button class="contact-submit" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer py-4 text-center">
+      <a href="mailto:kelly@kellyisasinger.com">kelly@kellyisasinger.com</a>
+    </footer>
+  </body>
+</html>

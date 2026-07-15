@@ -15,6 +15,18 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+p {
+  font-family: "DM Sans", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lavishly Yours", cursive;
+}
+
 .site-nav {
   min-height: 58px;
   background: var(--nav);
@@ -82,7 +94,8 @@ body {
 
 .hero-title {
   position: absolute;
-  top: 35%;
+  top: auto;
+  bottom: clamp(3rem, 9vh, 6rem);
   left: clamp(2rem, 14vw, 15.5rem);
   color: #fff;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.36);
@@ -90,9 +103,9 @@ body {
 
 h1 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Ruthie", cursive;
   font-size: clamp(4.2rem, 5.25vw, 6rem);
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: 0;
@@ -124,36 +137,19 @@ h1 {
 
 .page-hero {
   position: relative;
-  min-height: clamp(360px, 42vw, 560px);
+  min-height: clamp(160px, 20vw, 260px);
   display: grid;
   place-items: center;
   overflow: hidden;
+  background: linear-gradient(135deg, #181818, #080808);
   text-align: center;
-}
-
-.page-hero img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 42%;
-  opacity: 0.58;
-}
-
-.reviews-hero img {
-  object-position: 58% 32%;
-}
-
-.gallery-hero img {
-  object-position: 56% 38%;
 }
 
 .page-hero::after {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.72));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.35));
 }
 
 .page-hero h1 {
@@ -184,11 +180,78 @@ h1 {
   padding: clamp(1.75rem, 4vw, 3rem);
 }
 
+.contact-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  color: rgba(255, 255, 255, 0.92);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact-field label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 0.85rem 1rem;
+  color: #fff;
+  background: #080808;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.contact-field textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color: #fff;
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+  outline-offset: 2px;
+}
+
+.contact-submit {
+  justify-self: start;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  color: #050505;
+  background: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-submit:hover,
+.contact-submit:focus-visible {
+  color: #fff;
+  background: transparent;
+}
+
 .content-card h2,
 .gallery-meta h2 {
   margin: 0 0 1.45rem;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lavishly Yours", cursive;
   font-size: clamp(1.75rem, 3vw, 2.4rem);
   font-style: italic;
   font-weight: 400;
