@@ -1,29 +1,10 @@
-document.querySelectorAll(".gallery-card").forEach((card) => {
-  const carousel = card.querySelector(".scroll-carousel");
-  if (!carousel) {
-    return;
-  }
+import PhotoSwipeLightbox from "/photoswipe/photoswipe-lightbox.esm.js";
 
-  const frame = document.createElement("div");
-  frame.className = "gallery-frame";
-  carousel.parentNode.insertBefore(frame, carousel);
-  frame.appendChild(carousel);
+const options = {
+  gallery: "#gallery--responsive-images",
+  children: "a",
+  pswpModule: () => import("/photoswipe/photoswipe.esm.js"),
+};
 
-  const makeButton = (direction, label, text) => {
-    const button = document.createElement("button");
-    button.className = `gallery-arrow ${direction}`;
-    button.type = "button";
-    button.setAttribute("aria-label", label);
-    button.textContent = text;
-    button.addEventListener("click", () => {
-      carousel.scrollBy({
-        left: direction === "prev" ? -carousel.clientWidth : carousel.clientWidth,
-        behavior: "smooth",
-      });
-    });
-    frame.appendChild(button);
-  };
-
-  makeButton("prev", "Previous image", "‹");
-  makeButton("next", "Next image", "›");
-});
+const lightbox = new PhotoSwipeLightbox(options);
+lightbox.init();
