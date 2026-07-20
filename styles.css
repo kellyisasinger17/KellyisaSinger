@@ -16,11 +16,14 @@ body {
 }
 
 p {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Harmattan", sans-serif;
 }
 
 h2,
-h3,
+h3 {
+  font-family: "Alta", serif;
+}
+
 h4,
 h5,
 h6 {
@@ -103,7 +106,7 @@ h6 {
 
 h1 {
   margin: 0;
-  font-family: "Ruthie", cursive;
+  font-family: "Le Jour Serif", serif;
   font-size: clamp(4.2rem, 5.25vw, 6rem);
   font-style: normal;
   font-weight: 400;
@@ -251,7 +254,7 @@ h1 {
 .gallery-meta h2 {
   margin: 0 0 1.45rem;
   color: #fff;
-  font-family: "Lavishly Yours", cursive;
+  font-family: "Alta", serif;
   font-size: clamp(1.75rem, 3vw, 2.4rem);
   font-style: italic;
   font-weight: 400;
