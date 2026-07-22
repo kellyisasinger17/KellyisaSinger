@@ -114,6 +114,20 @@ h1 {
   letter-spacing: 0;
 }
 
+.home-page h1 {
+  color: #f0f5f9;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.65);
+}
+
+.home-page .hero-title hr {
+  color: #f0f5f9;
+  opacity: 1;
+}
+
+.home-page .hero-title h2 {
+  color: #f0f5f9;
+}
+
 .hero-title p {
   width: 100%;
   margin: 1.3rem 0 0;
@@ -248,6 +262,48 @@ h1 {
 .contact-submit:focus-visible {
   color: #fff;
   background: transparent;
+}
+
+.resume-page .content-card,
+.reviews-page .content-card {
+  color: #c9d6df;
+  background: #52616b;
+}
+
+.resume-page .content-card h2,
+.reviews-page .content-card h2 {
+  color: #c9d6df;
+  -webkit-text-stroke: 1px #000;
+  paint-order: stroke fill;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.contact-page .contact-card {
+  color: #000;
+  background: #c9d6df;
+}
+
+.contact-page .contact-card p {
+  color: #000;
+}
+
+.contact-page .contact-field input,
+.contact-page .contact-field textarea {
+  color: #000;
+  background: #f0f5f9;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.contact-page .contact-submit {
+  color: #fff;
+  background: #52616b;
+  border-color: #52616b;
+}
+
+.contact-page .contact-submit:hover,
+.contact-page .contact-submit:focus-visible {
+  color: #fff;
+  background: #3f4c54;
 }
 
 .content-card h2,
@@ -443,7 +499,7 @@ h1 {
 .site-footer {
   background: var(--black);
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.08rem;
+  font-size: calc(1.08rem - 2px);
   font-weight: 300;
 }
 
@@ -454,6 +510,21 @@ h1 {
 
 .site-footer a:hover {
   color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.privacy-page .content-card,
+.terms-page .content-card,
+.accessibility-page .content-card {
+  text-align: left;
 }
 
 @media (max-width: 991.98px) {
